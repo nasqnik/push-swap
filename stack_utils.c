@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   stack_utils.c                                      :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: anikitin <anikitin@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/09/18 11:08:12 by anikitin          #+#    #+#             */
+/*   Updated: 2024/09/18 13:41:48 by anikitin         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "push_swap.h"
 
 t_node *new_node(int num, int rank)
@@ -80,27 +92,20 @@ int is_sorted(t_all *all)
     return 1;
 }
 
-void set_pivot_max_min_a(t_all *all)
+
+int unsorted_len(t_node *stack)
 {
-    int size;
-    int min;
-    int max;
-
-    if (all->size_a == 0)
-        return;
-    size = all->size_a;
-    min = all->stack_a->index;
-    max = all->stack_a->index;
-
-    while (size-- > 0)
+    t_node *tmp;
+    int len;
+    int flag;
+    
+    len = 0;
+    flag = stack->flag;
+    tmp = stack;
+    while (tmp->flag == flag && flag != -1)
     {
-        if (min > all->stack_a->index)
-            min = all->stack_a->index;
-        if (max < all->stack_a->index)
-            max = all->stack_a->index;
-        all->stack_a = all->stack_a->next;
+        tmp = tmp->next;
+        len++;
     }
-    all->min = min;
-    all->max = max;
-    all->med = (min + max) / 2;
+    return len;
 }

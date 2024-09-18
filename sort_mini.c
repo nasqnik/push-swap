@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   sort_mini.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: anikitin <anikitin@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/09/18 11:08:03 by anikitin          #+#    #+#             */
+/*   Updated: 2024/09/18 12:50:39 by anikitin         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "push_swap.h"
 
 void sort_three_a(t_all *all)
@@ -18,8 +30,8 @@ void sort_three_a(t_all *all)
     second = all->stack_a->next->index;
     if (first > second)
         sa(all, 1);
-    if (is_sorted(all))
-        printf("Sorted");
+    // if (is_sorted(all))
+    //     printf("Sorted");
     free_stack(all); // проверить, нет ли дабл фри
 }
 

@@ -6,7 +6,7 @@
 /*   By: anikitin <anikitin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/13 16:53:04 by anikitin          #+#    #+#             */
-/*   Updated: 2024/09/13 16:59:09 by anikitin         ###   ########.fr       */
+/*   Updated: 2024/09/18 12:03:13 by anikitin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,8 +36,8 @@ void sorting(t_all *all)
         sort_three_a(all);
     else if (all->size_a <= 5)
         sort_five_a(all);
-    // else
-    //     big_sort(all);
+    else
+        big_sort(all);
 }
 
 int main(int argc, char **argv)
