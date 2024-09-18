@@ -15,6 +15,9 @@
 
 # include <stdlib.h>
 # include <limits.h>
+# include "libft/libft.h"
+# include "ft_printf/ft_printf.h"
+# include <stdio.h> // убрать перед сдачей
 
 typedef struct s_node
 {
@@ -37,7 +40,58 @@ typedef struct s_all
 	int				min_a;
 }					t_all;
 
-char **get_line(char **argv);
+// push_swap.c
+void	parsing(char **argv, t_all *all);
+
+// parsing_checks.c
+char	**get_line(char **argv);
+void	check_arg(char **arr);
+void	check_doubles(char **arr);
+void	free_arr(char **arr, int flag);
+void	error(void);
+
+// parsing_initialize.c
+void	initialize_struct(t_all *all, int arr_size);
+void	fill_stack(char **arr, t_all *all, int arr_size);
+void	random_to_ranked(int *numbers, int *rank, int size);
+void	create_stack(t_all *all, int *numbers, int *rank, int size);
+
+// stack_utils.c
+t_node	*new_node(int num, int rank);
+void	lstadd_back_doubly(t_node **stack_a, t_node *node);
+void	free_stack(t_all *all);
+int		is_sorted(t_all *all);
+void	set_pivot_max_min_a(t_all *all);
+
+// sort_mini.c
+void sort_three_a(t_all *all);
+void sort_five_a(t_all *all);
+void sort_three_b(t_all *all);
+
+// big_sort.c
+
+
+
+// operation_push.c
+void	pa(t_all *all, int flag);
+void 	push_a(t_all *all);
+void	pb(t_all *all, int flag);
+void 	push_b(t_all *all);
+
+// operation_swap.c
+void	sa(t_all *all, int flag);
+void	sb(t_all *all, int flag);
+void	ss(t_all *all, int flag);
+
+// operation_rotate.c
+void	ra(t_all *all, int flag);
+void	rb(t_all *all, int flag);
+void	rr(t_all *all, int flag);
+
+// operation_rrotate.c
+void	rra(t_all *all, int flag);
+void	rrb(t_all *all, int flag);
+void	rrr(t_all *all, int flag);
 
 
 #endif

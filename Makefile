@@ -5,7 +5,9 @@ NAME 				= push_swap
 HEADER				= push_swap.h
 #CHECKER			= checker
 
-SRC 				= push_swap.c 
+SRC 				= push_swap.c parsing_checks.c parsing_initialize.c stack_utils.c \
+					operation_push.c operation_swap.c operation_rotate.c operation_rrotate.c \
+					sort_mini.c sort_big.c
 					
 OBJ					= $(SRC:%.c=%.o)
 
