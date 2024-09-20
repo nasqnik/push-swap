@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   parsing_initialize.c                               :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: anikitin <anikitin@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/09/20 14:38:44 by anikitin          #+#    #+#             */
+/*   Updated: 2024/09/20 14:58:33 by anikitin         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "push_swap.h"
 
 void	initialize_struct(t_all *all, int arr_size)
@@ -53,12 +65,9 @@ void	create_stack(t_all *all, int *numbers, int *rank, int size)
 {
 	int	i;
 
-	i = 0;
-	while (i < size)
-	{
+	i = -1;
+	while (++i < size)
 		lstadd_back_doubly(&all->stack_a, new_node(numbers[i], rank[i]));
-		i++;
-	}
 	free(numbers);
 	free(rank);
 }

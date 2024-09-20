@@ -6,7 +6,7 @@
 /*   By: anikitin <anikitin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/13 16:53:04 by anikitin          #+#    #+#             */
-/*   Updated: 2024/09/13 16:59:09 by anikitin         ###   ########.fr       */
+/*   Updated: 2024/09/20 14:24:11 by anikitin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ void	sorting(t_all *all)
 	if (is_sorted(all) || all->size_a <= 1)
 		free_stack(all);
 	if (all->size_a <= 3)
-		sort_three_a(all);
+		sort_three_a(all, 1);
 	else if (all->size_a <= 5)
 		sort_five_a(all);
 	else

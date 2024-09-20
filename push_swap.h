@@ -6,7 +6,7 @@
 /*   By: anikitin <anikitin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/13 16:53:30 by anikitin          #+#    #+#             */
-/*   Updated: 2024/09/13 17:01:18 by anikitin         ###   ########.fr       */
+/*   Updated: 2024/09/20 16:00:31 by anikitin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,6 +39,7 @@ typedef struct s_all
 	int				max;
 	int				min_a;
 }					t_all;
+
 // push_swap.c 
 void	parsing(char **argv, t_all *all);
 void	sorting(t_all *all);
@@ -47,6 +48,8 @@ void	sorting(t_all *all);
 void	big_sort(t_all *all);
 void	sort_five_b_to_a(t_all *all);
 void	sort_five_a_to_b(t_all *all);
+void	sort_five_b_to_a_continue(t_all *all, int flag);
+void	sort_five_a_to_b_continue(t_all *all, int flag);
 
 // sort_move.c
 void	initial_move_a_to_b(t_all *all);
@@ -79,9 +82,10 @@ t_node	*new_node(int num, int rank);
 void	lstadd_back_doubly(t_node **stack_a, t_node *node);
 void	free_stack(t_all *all);
 int		is_sorted(t_all *all);
+int		unsorted_len(t_node *stack);
 
 // sort_mini.c
-void	sort_three_a(t_all *all);
+void	sort_three_a(t_all *all, int flag);
 void	sort_five_a(t_all *all);
 void	sort_three_b(t_all *all);
 

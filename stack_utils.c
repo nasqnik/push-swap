@@ -80,3 +80,20 @@ int	is_sorted(t_all *all)
 	}
 	return (1);
 }
+
+int unsorted_len(t_node *stack)
+{
+    t_node *tmp;
+    int len;
+    int flag;
+    
+    len = 0;
+    flag = stack->flag;
+    tmp = stack;
+    while (tmp->flag == flag && flag != -1)
+    {
+        tmp = tmp->next;
+        len++;
+    }
+    return len;
+}
