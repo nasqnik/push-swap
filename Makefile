@@ -7,7 +7,7 @@ HEADER				= push_swap.h
 
 SRC 				= push_swap.c parsing_checks.c parsing_initialize.c stack_utils.c \
 					operation_push.c operation_swap.c operation_rotate.c operation_rrotate.c \
-					sort_mini.c sort_big.c sort_utils.c sort_big_continue.c
+					sort_mini.c sort_big.c sort_utils.c sort_move.c debug.c
 					
 OBJ					= $(SRC:%.c=%.o)
 

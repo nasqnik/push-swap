@@ -12,17 +12,16 @@
 
 #include "push_swap.h"
 
-char **get_line(char **argv)
+char	**get_line(char **argv)
 {
-    int i;
-    char *line;
-    char *tmp;
-    char **arr;
+	int		i;
+	char	*line;
+	char	*tmp;
+	char	**arr;
 
-    line = ft_strdup(argv[1]);
-    i = 1;
-
-    while (argv[++i])
+	line = ft_strdup(argv[1]);
+	i = 1;
+	while (argv[++i])
 	{
 		tmp = line;
 		line = ft_strjoin(line, " ");
@@ -31,35 +30,34 @@ char **get_line(char **argv)
 		line = ft_strjoin(line, argv[i]);
 		free(tmp);
 	}
-    arr = ft_split(line, ' ');
-    free(line);
-    return arr;
+	arr = ft_split(line, ' ');
+	free(line);
+	return (arr);
 }
 
-void check_arg(char **arr)
+void	check_arg(char **arr)
 {
-    int i;
-    int j;
-    long long num;
+	int			i;
+	int			j;
+	long long	num;
 
-    i = -1;
-    while (arr[++i])
-    {
-        j = 0;
-        while (arr[i][j])
-        {
-            if (arr[i][j] == '-')
-                j++;
-            if (!(ft_isdigit(arr[i][j])))
-                free_arr(arr, 1);
-            j++;
-        }
-        num = ft_atoi(arr[i]);
-        if (num > INT_MAX || num < INT_MIN) // не работает проверка из-за atoi, поправить
-            free_arr(arr, 1);
-    }
+	i = -1;
+	while (arr[++i])
+	{
+		j = 0;
+		while (arr[i][j])
+		{
+			if (arr[i][j] == '-')
+				j++;
+			if (!(ft_isdigit(arr[i][j])))
+				free_arr(arr, 1);
+			j++;
+		}
+		num = ft_atoi(arr[i]);
+		if (num > INT_MAX || num < INT_MIN)
+			free_arr(arr, 1);
+	}
 }
-
 
 void	check_doubles(char **arr)
 {
@@ -75,7 +73,7 @@ void	check_doubles(char **arr)
 			if (ft_atoi(arr[i]) == ft_atoi(arr[j]))
 			{
 				free_arr(arr, 1);
-				return;
+				return ;
 			}
 			j++;
 		}
@@ -92,7 +90,7 @@ void	free_arr(char **arr, int flag)
 		free(arr[i]);
 	free(arr);
 	if (flag)
-        error();
+		error();
 }
 
 void	error(void)
