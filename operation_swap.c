@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   operation_swap.c                                   :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: anikitin <anikitin@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/09/13 16:53:04 by anikitin          #+#    #+#             */
+/*   Updated: 2024/09/20 14:24:11 by anikitin         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "push_swap.h"
 
 void	sa(t_all *all, int flag)
@@ -18,6 +30,7 @@ void	sa(t_all *all, int flag)
 	if (flag)
 		write(1, "sa\n", 3);
 }
+
 void	sb(t_all *all, int flag)
 {
 	int	tmp;
@@ -36,6 +49,7 @@ void	sb(t_all *all, int flag)
 	if (flag)
 		write(1, "sb\n", 3);
 }
+
 void	ss(t_all *all, int flag)
 {
 	if (all->size_a > 1 && all->size_b > 1)

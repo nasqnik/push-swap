@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   stack_utils.c                                      :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: anikitin <anikitin@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/09/18 12:46:21 by anikitin          #+#    #+#             */
+/*   Updated: 2024/09/20 16:23:27 by anikitin         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "push_swap.h"
 
 t_node	*new_node(int num, int rank)
@@ -62,7 +74,7 @@ void	free_stack(t_all *all)
 		all->stack_b = tmp;
 	}
 	free(all);
-	exit(0); // что это?
+	exit(0);
 }
 
 int	is_sorted(t_all *all)
@@ -81,19 +93,19 @@ int	is_sorted(t_all *all)
 	return (1);
 }
 
-int unsorted_len(t_node *stack)
+int	unsorted_len(t_node *stack)
 {
-    t_node *tmp;
-    int len;
-    int flag;
-    
-    len = 0;
-    flag = stack->flag;
-    tmp = stack;
-    while (tmp->flag == flag && flag != -1)
-    {
-        tmp = tmp->next;
-        len++;
-    }
-    return len;
+	t_node	*tmp;
+	int		len;
+	int		flag;
+
+	len = 0;
+	flag = stack->flag;
+	tmp = stack;
+	while (tmp->flag == flag && flag != -1)
+	{
+		tmp = tmp->next;
+		len++;
+	}
+	return (len);
 }

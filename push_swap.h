@@ -17,7 +17,7 @@
 # include <limits.h>
 # include "libft/libft.h"
 # include "ft_printf/ft_printf.h"
-# include <stdio.h> // убрать перед сдачей
+// # include <stdio.h> // убрать перед сдачей
 
 typedef struct s_node
 {
@@ -110,8 +110,8 @@ void	rra(t_all *all, int flag);
 void	rrb(t_all *all, int flag);
 void	rrr(t_all *all, int flag);
 
-// debug.c
-void	debug_a_b_before(t_all *all);
-void	debug_a_b_after(t_all *all);
+// // debug.c
+// void	debug_a_b_before(t_all *all);
+// void	debug_a_b_after(t_all *all);
 
 #endif

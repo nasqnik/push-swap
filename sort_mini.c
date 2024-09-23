@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   sort_mini.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: anikitin <anikitin@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/09/18 12:46:21 by anikitin          #+#    #+#             */
+/*   Updated: 2024/09/20 16:23:27 by anikitin         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "push_swap.h"
 
 void	sort_three_a(t_all *all, int flag)
@@ -35,6 +47,8 @@ void	sort_five_a(t_all *all)
 	sort_three_a(all, 0);
 	pa(all, 1);
 	pa(all, 1);
+	if (all->stack_a->index > all->stack_a->next->index)
+		sa(all, 1);
 	free_stack(all);
 }
 
@@ -53,7 +67,7 @@ void	sort_three_b(t_all *all)
 		rrb(all, 1);
 	else if (first > second && first > third)
 		rb(all, 1);
-	first = all->stack_b->index;;
+	first = all->stack_b->index;
 	second = all->stack_b->next->index;
 	if (first > second)
 		sb(all, 1);

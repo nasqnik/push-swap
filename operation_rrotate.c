@@ -28,7 +28,6 @@ void	rrb(t_all *all, int flag)
 		write(1, "rrb\n", 4);
 }
 
-
 void	rrr(t_all *all, int flag)
 {
 	if (all->size_a > 1 && all->size_b > 1)

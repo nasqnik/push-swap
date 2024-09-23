@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   sort_utils.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: anikitin <anikitin@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/09/18 12:46:21 by anikitin          #+#    #+#             */
+/*   Updated: 2024/09/20 16:23:27 by anikitin         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "push_swap.h"
 
 void	set_max_med_min_a(t_all *all)
@@ -47,41 +59,41 @@ void	set_max_med_min_b(t_all *all)
 	all->med = (min + max) / 2;
 }
 
-
-void search_min_a_to_b(t_all *all)
+void	search_min_a_to_b(t_all *all)
 {
-    int min;
+	int	min;
 
-    min = all->stack_a->prev->index + 1;
-    if (all->stack_b-> index == min)
-    {
-        pa(all, 1);
-        push_down_a(all);
-    }
-    else if (all->stack_b->next->index == min)
-    {
-        sb(all, 1);
-        pa(all, 1);
-        push_down_a(all);
-    }
-    else if(all->stack_b->prev->index == min)
-    {
-        rrb(all, 1);
-        pa(all, 1);
-        push_down_a(all);
-    }
-    else if (all->stack_a->next->index == min)
-    {
-        sa(all, 1);
-        push_down_a(all);
-    }
+	min = all->stack_a->prev->index + 1;
+	if (all->stack_b-> index == min)
+	{
+		pa(all, 1);
+		push_down_a(all);
+	}
+	else if (all->stack_b->next->index == min)
+	{
+		sb(all, 1);
+		pa(all, 1);
+		push_down_a(all);
+	}
+	else if (all->stack_b->prev->index == min)
+	{
+		rrb(all, 1);
+		pa(all, 1);
+		push_down_a(all);
+	}
+	else if (all->stack_a->next->index == min)
+	{
+		sa(all, 1);
+		push_down_a(all);
+	}
 }
 
-int search_min_b_to_a(t_all *all)
+int	search_min_b_to_a(t_all *all)
 {
-    int min;
-    min = all->stack_a->prev->index + 1;
-    if (all->stack_b->index == min)
+	int	min;
+
+	min = all->stack_a->prev->index + 1;
+	if (all->stack_b->index == min)
 	{
 		pa(all, 1);
 		push_down_a(all);

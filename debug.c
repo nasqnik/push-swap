@@ -12,9 +12,9 @@
 
 #include "push_swap.h"
 
-void debug_a_b_before(t_all *all)
+void	debug_a_b_before(t_all *all)
 {
-    t_node *cursor = all->stack_a;
+	t_node *cursor = all->stack_a;
     printf("\nStack a before: ");
     for (int i = 0; i < all->size_a; i++)
     {
