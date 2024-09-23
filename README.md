@@ -1,8 +1,9 @@
 # push_swap - 42 Project
 
-(still in progress, trying to implement the Quick Sort)
 
 **push_swap** is a 42 project where you must sort a stack of integers using a limited set of operations. The goal is to implement **the efficient sorting algorithm with the smallest number of moves possible**, adhering to the specific set of stack operations. 
+
+Implementing Quick Sort algorithm, using doubly linked list to store stacks.
 
 The project focuses on algorithm optimization and time complexity, as well as data structure manipulation using two stacks: `a` and `b`. Operations include pushing, swapping, rotating, and reverse rotating elements in the stacks.
 
