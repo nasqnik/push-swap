@@ -31,7 +31,7 @@ void	parsing(char **argv, t_all *all)
 void	sorting(t_all *all)
 {
 	if (is_sorted(all) || all->size_a <= 1)
-		free_stack(all);
+		free_stack(all, 0);
 	if (all->size_a <= 3)
 		sort_three_a(all, 1);
 	else if (all->size_a <= 5)
@@ -51,7 +51,7 @@ int	main(int argc, char **argv)
 			return (1);
 		parsing(argv, all);
 		sorting(all);
-		free_stack(all);
+		free_stack(all, 0);
 	}
 	return (0);
 }

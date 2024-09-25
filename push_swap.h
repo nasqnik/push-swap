@@ -78,7 +78,7 @@ void	create_stack(t_all *all, int *numbers, int *rank, int size);
 // stack_utils.c
 t_node	*new_node(int num, int rank);
 void	lstadd_back_doubly(t_node **stack_a, t_node *node);
-void	free_stack(t_all *all);
+void	free_stack(t_all *all, int flag);
 int		is_sorted(t_all *all);
 int		unsorted_len(t_node *stack);
 

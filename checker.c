@@ -12,6 +12,12 @@
 
 #include "push_swap.h"
 
+static void error_checker(t_all *all, char *line)
+{
+	free(line);
+	free_stack(all, 1);
+}
+
 static void	execute_command(t_all *all, char *line)
 {
 	if (ft_strncmp(line, "pa\n", 3) == 0)
@@ -37,7 +43,7 @@ static void	execute_command(t_all *all, char *line)
 	else if (ft_strncmp(line, "rrr\n", 4) == 0)
 		rrr(all, 0);
 	else
-		error();
+		error_checker(all, line);
 }
 
 static void	checker(t_all *all)
@@ -84,7 +90,7 @@ int	main(int argc, char **argv)
 			return (1);
 		parsing(argv, all);
 		checker(all);
-		free_stack(all);
+		free_stack(all, 0);
 	}
 	return (0);
 }

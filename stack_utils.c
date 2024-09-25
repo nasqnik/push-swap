@@ -55,7 +55,7 @@ void	lstadd_back_doubly(t_node **stack_a, t_node *node)
 		*stack_a = node;
 }
 
-void	free_stack(t_all *all)
+void	free_stack(t_all *all, int flag)
 {
 	t_node	*tmp;
 
@@ -74,7 +74,9 @@ void	free_stack(t_all *all)
 		all->stack_b = tmp;
 	}
 	free(all);
-	exit(0);
+	if (flag)
+		error();
+	exit(EXIT_SUCCESS);
 }
 
 int	is_sorted(t_all *all)

@@ -30,7 +30,7 @@ void	sort_three_a(t_all *all, int flag)
 	if (first > second)
 		sa(all, 1);
 	if (flag == 1)
-		free_stack(all);
+		free_stack(all, 0);
 }
 
 void	sort_five_a(t_all *all)
@@ -49,7 +49,7 @@ void	sort_five_a(t_all *all)
 	pa(all, 1);
 	if (all->stack_a->index > all->stack_a->next->index)
 		sa(all, 1);
-	free_stack(all);
+	free_stack(all, 0);
 }
 
 void	sort_three_b(t_all *all)
