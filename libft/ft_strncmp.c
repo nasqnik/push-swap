@@ -10,20 +10,6 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-/*
-The strcmp() and strncmp() functions lexicographically compare the 
-null-terminated strings s1 and s2.
-
-The strncmp() function compares not more than n characters.  Because strncmp() 
-is designed for comparing strings rather than binary data, characters that 
-appear after a `\0' character are not compared.
-
-This function return values that are as follows −
-if Return value < 0 then it indicates str1 is less than str2.
-if Return value > 0 then it indicates str2 is less than str1.
-if Return value = 0 then it indicates str1 is equal to str2.
-*/
-
 #include "libft.h"
 
 int	ft_strncmp(const char *s1, const char *s2, size_t n)

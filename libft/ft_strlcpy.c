@@ -10,16 +10,6 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-/*
-    - copies size - 1 characters and null-terminates the result;
-    - always null-terminates the destination string, as long as the size 
-    is greater than 0;
-    - desiged to prevent the buffer overflow by esurng the destination string 
-    is null-terminated, even if the source sting is too long;
-    - returns the total length of the string it tried to create (src string). 
-    this allows to detect truncation (compare the size and the strlen(src))
-*/
-
 #include "libft.h"
 
 size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)

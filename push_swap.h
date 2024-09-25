@@ -17,7 +17,6 @@
 # include <limits.h>
 # include "libft/libft.h"
 # include "ft_printf/ft_printf.h"
-// # include <stdio.h> // убрать перед сдачей
 
 typedef struct s_node
 {
@@ -48,8 +47,7 @@ void	sorting(t_all *all);
 void	big_sort(t_all *all);
 void	sort_five_b_to_a(t_all *all);
 void	sort_five_a_to_b(t_all *all);
-void	sort_five_b_to_a_continue(t_all *all, int flag);
-void	sort_five_a_to_b_continue(t_all *all, int flag);
+void	sort_three_b_and_merge(t_all *all, int flag);
 
 // sort_move.c
 void	initial_move_a_to_b(t_all *all);
@@ -109,9 +107,5 @@ void	rr(t_all *all, int flag);
 void	rra(t_all *all, int flag);
 void	rrb(t_all *all, int flag);
 void	rrr(t_all *all, int flag);
-
-// // debug.c
-// void	debug_a_b_before(t_all *all);
-// void	debug_a_b_after(t_all *all);
 
 #endif

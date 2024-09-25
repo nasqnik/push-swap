@@ -28,7 +28,7 @@ void	sa(t_all *all, int flag)
 	all->stack_a->flag = all->stack_a->next->flag;
 	all->stack_a->next->flag = tmp;
 	if (flag)
-		write(1, "sa\n", 3);
+		ft_printf("sa\n");
 }
 
 void	sb(t_all *all, int flag)
@@ -47,7 +47,7 @@ void	sb(t_all *all, int flag)
 	all->stack_b->flag = all->stack_b->next->flag;
 	all->stack_b->next->flag = tmp;
 	if (flag)
-		write(1, "sb\n", 3);
+		ft_printf("sb\n");
 }
 
 void	ss(t_all *all, int flag)
@@ -57,6 +57,6 @@ void	ss(t_all *all, int flag)
 		sa(all, 0);
 		sb(all, 0);
 		if (flag)
-			write(1, "ss\n", 3);
+			ft_printf("ss\n");
 	}
 }

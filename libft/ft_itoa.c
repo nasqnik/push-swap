@@ -10,16 +10,6 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-/*
-n: the integer to convert.
-Return value The string representing the integer.
-NULL if the allocation fails.
-
-Allocates (with malloc(3)) and returns a string
-representing the integer received as an argument.
-Negative numbers must be handled.
-*/
-
 #include <stdlib.h>
 #include "libft.h"
 

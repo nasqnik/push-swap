@@ -10,16 +10,6 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-/*
-Allocates (with malloc(3)) and returns a new string, 
-which is the result of the concatenation of ’s1’ and ’s2’.
-
-s1: The prefix string.
-s2: The suffix string.
-RETURN VALUE: The new string.
-NULL if the allocation fails.
-*/
-
 #include "libft.h"
 #include <stdlib.h>
 

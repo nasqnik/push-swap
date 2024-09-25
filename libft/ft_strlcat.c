@@ -10,19 +10,6 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-/*
-Strlcat() appends string src to the end of dst.  It will append at most 
-dstsize - strlen(dst) - 1 characters.  It will then NUL-terminate, 
-unless dstsize is 0 or the original dst string was longer than dstsize 
-(in practice this should not happen as it means that either dstsize is 
-incorrect or that dst is not a proper string).
-
-return values:
-- the total length of the string it tried to create, which is the 
-initial length of dst + the length of src;
-- if size <= to the length of dst, it returns size + length of src
-*/
-
 #include "libft.h"
 
 size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)

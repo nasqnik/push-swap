@@ -10,14 +10,6 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-/*
-s: The string from which to create the substring. 
-start: The start index of the substring in the string ’s’. 
-len: The maximum length of the substring.
-Return value: The substring.
-NULL if the allocation fails.
-*/
-
 #include <stdlib.h>
 #include "libft.h"
 

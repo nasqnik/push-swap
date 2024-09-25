@@ -10,12 +10,6 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-/*
-The strlen() function computes the length of the string s. The strnlen() 
-function attempts to compute the length of s, but never scans beyond the first 
-maxlen bytes of s.
-*/
-
 #include "libft.h"
 
 size_t	ft_strlen(const char *s)

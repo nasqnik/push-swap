@@ -12,7 +12,7 @@ SRC 		= push_swap.c parsing_checks.c parsing_initialize.c stack_utils.c \
 OBJ			= $(SRC:%.c=%.o)
 
 BONUS_SRC 	= checker.c parsing_checks.c parsing_initialize.c stack_utils.c \
-			operation_push.c operation_swap.c operation_rotate.c operation_rrotate.c debug.c\
+			operation_push.c operation_swap.c operation_rotate.c operation_rrotate.c 
 
 BONUS_OBJ 	= $(BONUS_SRC:.c=.o)
 

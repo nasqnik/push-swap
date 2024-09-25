@@ -10,14 +10,6 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-/*
-s n: The integer to output.
-fd: The file descriptor on which to write.
-
-Outputs the integer ’n’ to the given file
-descriptor.
-*/
-
 #include "libft.h"
 
 void	ft_putnbr_fd(int n, int fd)

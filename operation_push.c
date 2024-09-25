@@ -22,7 +22,7 @@ void	pa(t_all *all, int flag)
 	all->size_b--;
 	all->size_a++;
 	if (flag)
-		write(1, "pa\n", 3);
+		ft_printf("pa\n");
 }
 
 void	push_a(t_all *all)
@@ -59,7 +59,7 @@ void	pb(t_all *all, int flag)
 	all->size_b++;
 	all->size_a--;
 	if (flag)
-		write(1, "pb\n", 3);
+		ft_printf("pb\n");
 }
 
 void	push_b(t_all *all)

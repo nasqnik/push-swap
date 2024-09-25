@@ -17,7 +17,7 @@ void	rra(t_all *all, int flag)
 	if (all->size_a > 1)
 		all->stack_a = all->stack_a->prev;
 	if (flag)
-		write(1, "rra\n", 4);
+		ft_printf("rra\n");
 }
 
 void	rrb(t_all *all, int flag)
@@ -25,7 +25,7 @@ void	rrb(t_all *all, int flag)
 	if (all->size_b > 1)
 		all->stack_b = all->stack_b->prev;
 	if (flag)
-		write(1, "rrb\n", 4);
+		ft_printf("rrb\n");
 }
 
 void	rrr(t_all *all, int flag)
@@ -35,6 +35,6 @@ void	rrr(t_all *all, int flag)
 		rra(all, 0);
 		rrb(all, 0);
 		if (flag)
-			write(1, "rrr\n", 4);
+			ft_printf("rrr\n");
 	}
 }

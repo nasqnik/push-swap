@@ -10,15 +10,6 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-/*
-c: The character to output.
-fd: The file descriptor on which to write.
-
-Outputs the character ’c’ to the given file
-descriptor
-
-*/
-
 #include "libft.h"
 #include <unistd.h>
 

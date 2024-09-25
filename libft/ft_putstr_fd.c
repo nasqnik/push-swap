@@ -10,12 +10,6 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-/* Outputs the string ’s’ to the given file
-descriptor. 
-s: The string to output.
-fd: The file descriptor on which to write.
-*/
-
 #include "libft.h"
 
 void	ft_putstr_fd(char *s, int fd)

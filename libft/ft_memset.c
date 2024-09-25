@@ -10,15 +10,6 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-/*
-The memset() function writes len bytes of value c (converted to an unsigned 
-char)  to the string b. The memset() function returns its first argument.
-
-Memset is a standard library function in C used to fill a block of memory 
-with a particular value. It is often used to initialize a memory buffer to 
-a known state.
-*/
-
 #include "libft.h"
 
 void	*ft_memset(void *b, int c, size_t len)
