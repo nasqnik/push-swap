@@ -6,13 +6,14 @@
 /*   By: anikitin <anikitin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/13 16:53:30 by anikitin          #+#    #+#             */
-/*   Updated: 2024/09/20 16:00:31 by anikitin         ###   ########.fr       */
+/*   Updated: 2024/09/26 18:21:44 by anikitin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef PUSH_SWAP_H
 # define PUSH_SWAP_H
 
+# include <stdio.h>
 # include <stdlib.h>
 # include <limits.h>
 # include "libft/libft.h"
@@ -64,9 +65,9 @@ void	push_down_a(t_all *all);
 
 // parsing_checks.c
 char	**get_line(char **argv);
-void	check_arg(char **arr);
-void	check_doubles(char **arr);
-void	free_arr(char **arr, int flag);
+void	check_arg(char **arr, t_all *all);
+void	check_doubles(char **arr, t_all *all);
+void	free_arr(char **arr);
 void	error(void);
 
 // parsing_initialize.c

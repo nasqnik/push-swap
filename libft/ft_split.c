@@ -6,7 +6,7 @@
 /*   By: anikitin <anikitin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/05 17:51:12 by anikitin          #+#    #+#             */
-/*   Updated: 2024/07/10 14:37:32 by anikitin         ###   ########.fr       */
+/*   Updated: 2024/09/26 17:52:38 by anikitin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -92,6 +92,8 @@ char	**ft_split(char const *s, char c)
 	if (!s)
 		return (NULL);
 	word_counter = word_count(s, c) + 1;
+	if (word_counter == 1)
+		return (NULL);
 	array = (char **)malloc((word_counter) * sizeof(char *));
 	if (!array)
 		return (NULL);

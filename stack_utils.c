@@ -6,7 +6,7 @@
 /*   By: anikitin <anikitin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/18 12:46:21 by anikitin          #+#    #+#             */
-/*   Updated: 2024/09/20 16:23:27 by anikitin         ###   ########.fr       */
+/*   Updated: 2024/09/26 17:34:05 by anikitin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,6 +59,7 @@ void	free_stack(t_all *all, int flag)
 {
 	t_node	*tmp;
 
+	tmp = NULL;
 	while (all->size_a--)
 	{
 		tmp = all->stack_a->next;

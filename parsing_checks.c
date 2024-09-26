@@ -6,7 +6,7 @@
 /*   By: anikitin <anikitin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/06 16:21:09 by anikitin          #+#    #+#             */
-/*   Updated: 2024/09/13 17:01:04 by anikitin         ###   ########.fr       */
+/*   Updated: 2024/09/26 18:28:44 by anikitin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ char	**get_line(char **argv)
 	return (arr);
 }
 
-void	check_arg(char **arr)
+void	check_arg(char **arr, t_all *all)
 {
 	int			i;
 	int			j;
@@ -45,21 +45,25 @@ void	check_arg(char **arr)
 	while (arr[++i])
 	{
 		j = 0;
-		while (arr[i][j])
-		{
-			if (arr[i][j] == '-')
-				j++;
-			if (!(ft_isdigit(arr[i][j])))
-				free_arr(arr, 1);
+		if (arr[i][j] == '-')
 			j++;
+		while (arr[i][j] && ft_isdigit(arr[i][j]))
+			j++;
+		if (arr[i][j])
+		{
+			free_arr(arr);
+			free_stack(all, 1);
 		}
 		num = ft_atoi(arr[i]);
 		if (num > INT_MAX || num < INT_MIN)
-			free_arr(arr, 1);
+		{
+			free_arr(arr);
+			free_stack(all, 1);
+		}
 	}
 }
 
-void	check_doubles(char **arr)
+void	check_doubles(char **arr, t_all *all)
 {
 	int		i;
 	int		j;
@@ -72,8 +76,8 @@ void	check_doubles(char **arr)
 		{
 			if (ft_atoi(arr[i]) == ft_atoi(arr[j]))
 			{
-				free_arr(arr, 1);
-				return ;
+				free_arr(arr);
+				free_stack(all, 1);
 			}
 			j++;
 		}
@@ -81,7 +85,7 @@ void	check_doubles(char **arr)
 	}
 }
 
-void	free_arr(char **arr, int flag)
+void	free_arr(char **arr)
 {
 	int	i;
 
@@ -89,8 +93,6 @@ void	free_arr(char **arr, int flag)
 	while (arr[++i])
 		free(arr[i]);
 	free(arr);
-	if (flag)
-		error();
 }
 
 void	error(void)

@@ -6,7 +6,7 @@
 /*   By: anikitin <anikitin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/13 16:53:04 by anikitin          #+#    #+#             */
-/*   Updated: 2024/09/20 14:24:11 by anikitin         ###   ########.fr       */
+/*   Updated: 2024/09/26 18:21:32 by anikitin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,14 +18,18 @@ void	parsing(char **argv, t_all *all)
 	int		arr_size;
 
 	arr = get_line(argv);
+	all->size_a = 0;
+	all->size_b = 0;
+	if (!arr)
+		free_stack(all, 1);
 	arr_size = 0;
 	while (arr[arr_size])
 		arr_size++;
-	check_arg(arr);
-	check_doubles(arr);
+	check_arg(arr, all);
+	check_doubles(arr, all);
 	initialize_struct(all, arr_size);
 	fill_stack(arr, all, arr_size);
-	free_arr(arr, 0);
+	free_arr(arr);
 }
 
 void	sorting(t_all *all)
